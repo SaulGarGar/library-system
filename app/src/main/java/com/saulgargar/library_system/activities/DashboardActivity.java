@@ -1,7 +1,9 @@
-package com.saulgargar.library_system;
+package com.saulgargar.library_system.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.saulgargar.library_system.R;
 
 public class DashboardActivity extends AppCompatActivity {
 
