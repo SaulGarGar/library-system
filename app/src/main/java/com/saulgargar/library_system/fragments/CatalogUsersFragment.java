@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,12 @@ import android.view.ViewGroup;
 import com.saulgargar.library_system.R;
 import com.saulgargar.library_system.activities.AddBookActivity;
 import com.saulgargar.library_system.activities.AddUserActivity;
+import com.saulgargar.library_system.adapters.BookRecyclerAdapter;
+import com.saulgargar.library_system.adapters.UserRecyclerAdapter;
+import com.saulgargar.library_system.models.Book;
+import com.saulgargar.library_system.models.User;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +27,12 @@ import com.saulgargar.library_system.activities.AddUserActivity;
 public class CatalogUsersFragment extends Fragment {
 
     private FloatingActionButton addUserFab;
+
+    private RecyclerView recyclerView;
+    private RecyclerView.LayoutManager layoutManager;
+    private UserRecyclerAdapter adapter;
+
+    private ArrayList<User> users = new ArrayList<>();
 
 
     public CatalogUsersFragment() {
@@ -32,6 +46,8 @@ public class CatalogUsersFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_catalog_users, container, false);
 
+        recyclerView = view.findViewById(R.id.recyclerview);
+
         addUserFab = view.findViewById(R.id.add_user);
         addUserFab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +57,21 @@ public class CatalogUsersFragment extends Fragment {
             }
         });
 
+        getTheData();
+
         return view;
+    }
+
+    public void getTheData(){
+
+        setRecyclerView();
+    }
+
+    public void setRecyclerView(){
+        layoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setLayoutManager(layoutManager);
+        adapter = new UserRecyclerAdapter(users,getActivity());
+        recyclerView.setAdapter(adapter);
     }
 
 }

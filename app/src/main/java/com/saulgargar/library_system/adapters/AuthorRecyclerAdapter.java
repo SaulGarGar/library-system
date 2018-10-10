@@ -32,6 +32,11 @@ public class AuthorRecyclerAdapter extends RecyclerView.Adapter<AuthorRecyclerAd
         }
     }
 
+    public AuthorRecyclerAdapter(ArrayList<Author> authors, Context context) {
+        this.authors = authors;
+        this.context = context;
+    }
+
     @NonNull
     @Override
     public AuthorViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
