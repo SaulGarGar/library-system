@@ -1,6 +1,6 @@
 package com.saulgargar.library_system.models;
 
-public class book {
+public class Book {
 
     private int id;
     private String title;
@@ -8,7 +8,7 @@ public class book {
     private String editorial;
     private String numberOfCopies;
 
-    public book(int id, String title, String location, String editorial, String numberOfCopies) {
+    public Book(int id, String title, String location, String editorial, String numberOfCopies) {
         this.id = id;
         this.title = title;
         this.location = location;

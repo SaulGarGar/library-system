@@ -1,12 +1,12 @@
 package com.saulgargar.library_system.models;
 
-public class copy {
+public class Copy {
 
     private int id;
     private String copyNumber;
     private boolean isBorrow;
 
-    public copy(int id, String copyNumber, boolean isBorrow) {
+    public Copy(int id, String copyNumber, boolean isBorrow) {
         this.id = id;
         this.copyNumber = copyNumber;
         this.isBorrow = isBorrow;
