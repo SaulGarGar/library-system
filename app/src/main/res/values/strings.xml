@@ -2,5 +2,8 @@
     <string name="app_name">library-system</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_title">Biblioteca</string>
+    <string name="books_section">Libros</string>
+    <string name="author_section">Autores</string>
+    <string name="user_section">Usuarios</string>
 </resources>
