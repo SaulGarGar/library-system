@@ -6,6 +6,9 @@ public class Copy {
     private String copyNumber;
     private boolean isBorrow;
 
+    public Copy() {
+    }
+
     public Copy(int id, String copyNumber, boolean isBorrow) {
         this.id = id;
         this.copyNumber = copyNumber;

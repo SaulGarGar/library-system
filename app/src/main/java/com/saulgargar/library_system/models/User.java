@@ -10,6 +10,9 @@ public class User {
     private String phone;
     private ArrayList<Copy> copiesBorrowed;
 
+    public User() {
+    }
+
     public User(int id, String name, String address, String phone, ArrayList<Copy> copiesBorrowed) {
         this.id = id;
         this.name = name;
