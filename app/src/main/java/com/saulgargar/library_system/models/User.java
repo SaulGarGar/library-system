@@ -2,13 +2,15 @@ package com.saulgargar.library_system.models;
 
 import java.util.ArrayList;
 
-public class User {
+import io.realm.RealmObject;
+
+public class User extends RealmObject{
 
     private int id;
     private String name;
     private String address;
     private String phone;
-    private ArrayList<Copy> copiesBorrowed;
+    //private ArrayList<Copy> copiesBorrowed;
 
     public User() {
     }
@@ -18,7 +20,7 @@ public class User {
         this.name = name;
         this.address = address;
         this.phone = phone;
-        this.copiesBorrowed = copiesBorrowed;
+        //this.copiesBorrowed = copiesBorrowed;
     }
 
     public int getId() {
@@ -53,11 +55,5 @@ public class User {
         this.phone = phone;
     }
 
-    public ArrayList<Copy> getCopiesBorrowed() {
-        return copiesBorrowed;
-    }
 
-    public void setCopiesBorrowed(ArrayList<Copy> copiesBorrowed) {
-        this.copiesBorrowed = copiesBorrowed;
-    }
 }

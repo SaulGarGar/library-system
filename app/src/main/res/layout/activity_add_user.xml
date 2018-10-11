@@ -28,7 +28,7 @@
             android:layout_weight="1.5"/>
 
         <EditText
-            android:id="@+id/book_title"
+            android:id="@+id/user_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -54,7 +54,7 @@
             android:layout_weight="1.5"/>
 
         <EditText
-            android:id="@+id/book_location"
+            android:id="@+id/user_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
@@ -80,7 +80,7 @@
             android:layout_weight="1.5"/>
 
         <EditText
-            android:id="@+id/book_editorial"
+            android:id="@+id/user_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="phone"
@@ -91,6 +91,7 @@
 
 
     <Button
+        android:id="@+id/add_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"

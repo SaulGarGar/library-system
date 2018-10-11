@@ -1,6 +1,8 @@
 package com.saulgargar.library_system.models;
 
-public class Copy {
+import io.realm.RealmObject;
+
+public class Copy extends RealmObject{
 
     private int id;
     private String copyNumber;

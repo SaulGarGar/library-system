@@ -8,9 +8,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.saulgargar.library_system.R;
 import com.saulgargar.library_system.models.Author;
+import com.saulgargar.library_system.services.DataBaseHandler;
+
+import io.realm.Realm;
 
 public class AddAuthorActivity extends AppCompatActivity {
 
@@ -21,6 +25,7 @@ public class AddAuthorActivity extends AppCompatActivity {
     private Button addButton;
 
     private Author author = new Author();
+    private DataBaseHandler dataBaseHandler = new DataBaseHandler(Realm.getDefaultInstance());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +41,8 @@ public class AddAuthorActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 author.setName(authorNameEt.getText().toString());
+                dataBaseHandler.saveNewAuthor(author.getName());
+                Toast.makeText(AddAuthorActivity.this, "Autor guardado", Toast.LENGTH_SHORT).show();
             }
         });
 

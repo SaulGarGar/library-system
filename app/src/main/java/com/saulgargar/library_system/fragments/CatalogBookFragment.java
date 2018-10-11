@@ -17,8 +17,11 @@ import com.saulgargar.library_system.activities.AddBookActivity;
 import com.saulgargar.library_system.adapters.AuthorRecyclerAdapter;
 import com.saulgargar.library_system.adapters.BookRecyclerAdapter;
 import com.saulgargar.library_system.models.Book;
+import com.saulgargar.library_system.services.DataBaseHandler;
 
 import java.util.ArrayList;
+
+import io.realm.Realm;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,6 +35,7 @@ public class CatalogBookFragment extends Fragment {
     private BookRecyclerAdapter adapter;
 
     private ArrayList<Book> books = new ArrayList<>();
+    private DataBaseHandler dataBaseHandler = new DataBaseHandler(Realm.getDefaultInstance());
 
 
     public CatalogBookFragment() {
@@ -63,6 +67,8 @@ public class CatalogBookFragment extends Fragment {
     }
 
     public void getTheData(){
+
+        books.addAll(dataBaseHandler.getBooksSaved());
 
         setRecyclerView();
     }

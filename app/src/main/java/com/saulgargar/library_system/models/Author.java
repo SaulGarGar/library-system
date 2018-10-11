@@ -2,11 +2,13 @@ package com.saulgargar.library_system.models;
 
 import java.util.ArrayList;
 
-public class Author {
+import io.realm.RealmObject;
+
+public class Author extends RealmObject{
 
     private int id;
     private String name;
-    private ArrayList<Book> books;
+    //private ArrayList<Book> books;
 
     public Author() {
     }
@@ -14,7 +16,7 @@ public class Author {
     public Author(int id, String name, ArrayList<Book> books) {
         this.id = id;
         this.name = name;
-        this.books = books;
+        //this.books = books;
     }
 
     public int getId() {
@@ -33,11 +35,5 @@ public class Author {
         this.name = name;
     }
 
-    public ArrayList<Book> getBooks() {
-        return books;
-    }
 
-    public void setBooks(ArrayList<Book> books) {
-        this.books = books;
-    }
 }

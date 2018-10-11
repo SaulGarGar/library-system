@@ -58,7 +58,7 @@ public class UserRecyclerAdapter extends RecyclerView.Adapter<UserRecyclerAdapte
         holder.userName.setText(user.getName());
         holder.userPhone.setText(user.getPhone());
         holder.userAddress.setText(user.getAddress());
-        holder.borrowedBooks.setText(String.valueOf(user.getCopiesBorrowed().size()));
+        //holder.borrowedBooks.setText(String.valueOf(user.getCopiesBorrowed().size()));
 
     }
 

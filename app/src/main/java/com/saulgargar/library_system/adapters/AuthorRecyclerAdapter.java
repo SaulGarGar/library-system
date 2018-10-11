@@ -52,7 +52,7 @@ public class AuthorRecyclerAdapter extends RecyclerView.Adapter<AuthorRecyclerAd
         final Author author = authors.get(position);
 
         holder.authorName.setText(author.getName());
-        holder.booksNumber.setText(String.valueOf(author.getBooks().size()));
+        //holder.booksNumber.setText(String.valueOf(author.getBooks().size()));
 
     }
 

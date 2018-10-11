@@ -1,6 +1,8 @@
 package com.saulgargar.library_system.models;
 
-public class Book {
+import io.realm.RealmObject;
+
+public class Book extends RealmObject {
 
     private int id;
     private String title;
